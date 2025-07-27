@@ -1,6 +1,12 @@
 from time import perf_counter
 
-import constat
+from constat import (
+    train_list_1000,
+    train_list_751,
+    train_list_500,
+    train_list_321,
+    train_list_99
+    )
 
 time_result: dict = {}
 
@@ -25,11 +31,11 @@ def selection_sort(data: list):
 
 
 def make_sort():
-    data: list[list] = [constat.train_list_1000,
-                        constat.train_list_751,
-                        constat.train_list_500,
-                        constat.train_list_321,
-                        constat.train_list_99]
+    data: list[list] = [train_list_1000,
+                        train_list_751,
+                        train_list_500,
+                        train_list_321,
+                        train_list_99]
 
     for test_name, incoming_data in enumerate(data):
         global time_result
