@@ -11,11 +11,15 @@ from constat import (
 time_result = {}
 
 
-@get_time
-def get_factorial(num: int):
-    if num <= 1:
+def pure_fibonacci(num: int):
+    if num in (1, 2):
         return 1
-    return num * get_factorial(num - 1)[0]
+    return pure_fibonacci(num - 1) + pure_fibonacci(num - 2)
+
+
+@get_time
+def get_fibonacci(num: int):
+    return pure_fibonacci(num)
 
 
 def make_test():
@@ -29,7 +33,7 @@ def make_test():
 
     for test_name, incoming_data in enumerate(data):
         global time_result
-        result, result_time = get_factorial(incoming_data)
+        result, result_time = get_fibonacci(incoming_data)
         time_result.setdefault(test_name, result_time)
         print(result)
     return print("all tests completed")
