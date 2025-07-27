@@ -1,0 +1,18 @@
+#stuff
+venv/
+.pylintrc
+__pycache__/
+.mypy_cache
+.env
+venv
+lots_images
+fixtures
+cache/
+
+#ide stuff
+.vscode
+.idea
+
+#django stuff
+db.sqlite3
+
