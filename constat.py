@@ -14,3 +14,12 @@ num_7 = 7
 num_12 = 12
 num_23 = 23
 num_41 = 41
+
+
+# data for stack
+data_1 = "()"
+data_2 = "()[]{}"
+data_3 = "(]"
+data_4 = "([)]"
+data_5 = "([])"
+
